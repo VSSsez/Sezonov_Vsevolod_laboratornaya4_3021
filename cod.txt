@@ -1,0 +1,184 @@
+#commit
+uint8_t state = 0; //глобальная переменная состояния
+#define red_one 10 //красный светодиод (1)
+#define yellow_one 9 //желтый (1)
+#define green_one 8 //зеленый (1)
+#define red_two 7 //красный (2)
+#define yellow_two 6 //желтый (2)
+#define green_two 5 //зеленый (2)
+enum Pins
+{
+  R=10,
+  Y=9,
+  G=8,
+  R1=7,
+  Y1=6,
+  G1=5,
+};
+int TELE_ONE[] = {10, 9, 8};
+int TELE_TWO[] = {7, 6, 5};
+void setup()
+{
+  for (uint8_t i = R; i >= G; i--)
+  {
+    pinMode (i, OUTPUT); //Установить вывод № i как выход
+  }
+}
+void loop()
+{
+  //Условный оператор переключения сигналов в зависимости от переменной state
+  switch (state)
+  {
+    case 0: //Горит красный и зеленый
+      digitalWrite(R, true); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, false);
+      digitalWrite (R1, false);
+      digitalWrite(Y1, false);
+      digitalWrite(G1, true);
+      delay(5000); //Задержка на 5 секунд 
+      break;
+    case 1: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
+      break;
+
+ case 2: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
+      break;
+case 45: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
+      break;
+
+uint8_t state = 0; //глобальная переменная состояния
+#define red_one 10 //красный светодиод (1)
+#define yellow_one 9 //желтый (1)
+#define green_one 8 //зеленый (1)
+#define red_two 7 //красный (2)
+#define yellow_two 6 //желтый (2)
+#define green_two 5 //зеленый (2)
+enum Pins
+{
+  R=10,
+  Y=9,
+  G=8,
+  R1=7,
+  Y1=6,
+  G1=5,
+};
+int TELE_ONE[] = {10, 9, 8};
+int TELE_TWO[] = {7, 6, 5};
+void setup()
+{
+  for (uint8_t i = R; i >= G; i--)
+  {
+    pinMode (i, OUTPUT); //Установить вывод № i как выход
+  }
+}
+void loop()
+{
+  //Условный оператор переключения сигналов в зависимости от переменной state
+  switch (state)
+  {
+    case 0: //Горит красный и зеленый
+      digitalWrite(R, true); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, false);
+      digitalWrite (R1, false);
+      digitalWrite(Y1, false);
+      digitalWrite(G1, true);
+      delay(5000); //Задержка на 5 секунд 
+      break;
+    case 1: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
+      break;
+
+ case 2: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
+
+изменения
+ case 222: //Горят красный и жёлтый в первом светофоре, во втором мигает зеленый, после загорается зеленый на первом светофоре
+      digitalWrite(R, true); 
+      digitalWrite(Y, true); 
+      digitalWrite(G1, false);
+      delay(1000); 
+      digitalWrite(G1, true);
+      delay(1000);  
+      digitalWrite(G1, false);
+      delay(1000);
+      digitalWrite(R, false); 
+      digitalWrite(Y, false); 
+      digitalWrite(G, true);
+      digitalWrite(G1, true);
+      delay(1000);
+      digitalWrite(G1, false);
+      delay(1000);
